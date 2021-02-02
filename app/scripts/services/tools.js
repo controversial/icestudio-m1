@@ -953,6 +953,7 @@ angular.module('icestudio')
         apioInstallIverilog,
         apioInstallDrivers,
         apioInstallScons,
+        passGatekeeper,
         installationCompleted
       ]);
     }
@@ -1063,6 +1064,12 @@ angular.module('icestudio')
     function apioInstallScons(callback) {
       updateProgress('apio install scons', 90);
       utils.apioInstall('scons', callback);
+    }
+
+    function passGatekeeper(callback) {
+      updateProgress('Remove binaries from gatekeeper quarantine', 95);
+      console.log('hey!');
+      utils.executeCommand(['xattr', '-r', '-d', 'com.apple.quarantine', '~/.icestudio/apio/packages/'], callback);
     }
 
     function installationCompleted(callback) {
