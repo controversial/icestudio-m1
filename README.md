@@ -5,7 +5,7 @@
 [![License](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-2.0)
 [![Documentation Status](https://readthedocs.org/projects/icestudio/badge/?version=latest)](http://icestudio.readthedocs.io/en/latest)
 
-Visual editor for open FPGA boards. Built on top of the [Icestorm project](http://www.clifford.at/icestorm/) using [Apio](https://github.com/FPGAwars/apio).
+Visual editor for open FPGA boards. **Modified to run on Apple M1 architecture**. Built on top of the [Icestorm project](http://www.clifford.at/icestorm/) using [Apio](https://github.com/FPGAwars/apio).
 
     Graphic design -> Verilog, PCF -> Bistream -> FPGA
 
@@ -73,14 +73,14 @@ Because Icestudio is in development proccess, until it rises to 1.0 version, we 
 
   1. For **stable** version, download and execute the [Windows installer](https://github.com/FPGAwars/icestudio/releases)
   2. For **nightly** version, download it from [icestudio.io](https://icestudio.io)
-  
+
 
 * **Mac OS**
 
   1. Install [Python >=  3.5](https://www.python.org) and [Homebrew](https://brew.sh)
   2. For **stable** version, download and execute the [DMG package](https://github.com/FPGAwars/icestudio/releases)
   3. For **nightly** version, download it from [icestudio.io](https://icestudio.io)
-  
+
 <img src="https://raw.githubusercontent.com/FPGAwars/icestudio/develop/docs/resources/images/demo/main.png" width="700" align="center">
 
 <img src="https://raw.githubusercontent.com/FPGAwars/icestudio/develop/docs/resources/images/demo/main-1.png" width="700" align="center">
