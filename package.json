@@ -22,6 +22,7 @@
   "scripts": {
     "start": "grunt serve",
     "dist": "grunt dist",
+    "mac-build": "cp -R node_modules/nw/nwjs/nwjs.app icestudio.app && cp -R app icestudio.app/Contents/Resources/app.nw",
     "gettext": "grunt gettext",
     "postinstall": "npmpd && cd app && npm install && bower install && cd ../tasks && npm install && cd .. && grunt getcollection"
   },

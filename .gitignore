@@ -21,3 +21,5 @@ bower_components
 .vscode
 app/resources/collection
 app/resources/locale/**/*.json
+
+icestudio.app
