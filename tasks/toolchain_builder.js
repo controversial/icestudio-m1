@@ -288,14 +288,14 @@ function getPythonExecutable() {
           possibleExecutables.push('/usr/bin/python3');
           possibleExecutables.push('/usr/bin/python');
 
-          possibleExecutables.push('/usr/local/bin/python3.8');
-          possibleExecutables.push('/usr/local/bin/python3.9');
-          possibleExecutables.push('/usr/local/bin/python3.7');
-          possibleExecutables.push('/usr/local/bin/python3.6');
-          possibleExecutables.push('/usr/local/bin/python3.5');
-          possibleExecutables.push('/usr/local/bin/python3');
-          possibleExecutables.push('/usr/local/bin/python');
- 
+          possibleExecutables.push('/opt/homebrew/bin/python3.8');
+          possibleExecutables.push('/opt/homebrew/bin/python3.9');
+          possibleExecutables.push('/opt/homebrew/bin/python3.7');
+          possibleExecutables.push('/opt/homebrew/bin/python3.6');
+          possibleExecutables.push('/opt/homebrew/bin/python3.5');
+          possibleExecutables.push('/opt/homebrew/bin/python3');
+          possibleExecutables.push('/opt/homebrew/bin/python');
+
           possibleExecutables.push('python3.9');
           possibleExecutables.push('python3.8');
           possibleExecutables.push('python3.7');
@@ -318,7 +318,7 @@ function getPythonExecutable() {
   return _pythonExecutableCached;
 }
 
- function isPython3(executable) {    
+ function isPython3(executable) {
   const args = ['-V'];
   try {
         const result = childProcess.spawnSync(executable, args);

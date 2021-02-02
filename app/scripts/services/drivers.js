@@ -219,7 +219,7 @@ angular.module('icestudio')
 
     function enableDarwinDrivers(brewPackages, profileSetting) {
       var brewCommands = [
-        '/usr/local/bin/brew update'
+        '/opt/homebrew/bin/brew update'
       ];
       for (var i in brewPackages) {
         brewCommands = brewCommands.concat(brewInstall(brewPackages[i]));
@@ -282,9 +282,7 @@ angular.module('icestudio')
 
     function brewInstall(brewPackage) {
       return [
-        '/usr/local/bin/brew install --force ' + brewPackage,
-        '/usr/local/bin/brew unlink ' + brewPackage,
-        '/usr/local/bin/brew link --force ' + brewPackage
+        '/opt/homebrew/bin/brew install ' + brewPackage,
       ];
     }
 

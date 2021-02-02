@@ -64,13 +64,13 @@ angular.module('icestudio')
           possibleExecutables.push('/usr/bin/python3');
           possibleExecutables.push('/usr/bin/python');
 
-          possibleExecutables.push('/usr/local/bin/python3.9');
-          possibleExecutables.push('/usr/local/bin/python3.8');
-          possibleExecutables.push('/usr/local/bin/python3.7');
-          possibleExecutables.push('/usr/local/bin/python3.6');
-          possibleExecutables.push('/usr/local/bin/python3.5');
-          possibleExecutables.push('/usr/local/bin/python3');
-          possibleExecutables.push('/usr/local/bin/python');
+          possibleExecutables.push('/opt/homebrew/bin/python3.9');
+          possibleExecutables.push('/opt/homebrew/bin/python3.8');
+          possibleExecutables.push('/opt/homebrew/bin/python3.7');
+          possibleExecutables.push('/opt/homebrew/bin/python3.6');
+          possibleExecutables.push('/opt/homebrew/bin/python3.5');
+          possibleExecutables.push('/opt/homebrew/bin/python3');
+          possibleExecutables.push('/opt/homebrew/bin/python');
 
           possibleExecutables.push('python3.9');
           possibleExecutables.push('python3.8');
@@ -186,15 +186,15 @@ angular.module('icestudio')
         }.bind(this)
       );
     };
-    
+
     this.executeCommand = function (command, callback) {
       let cmd = command.join(' ');
       let _this = this;
-      
+
       iceConsole.log(`utils.executeCommand => ${cmd}\n`);
-      
+
       let args=[];
-      
+
       if(command.length>0) args=command.slice(1);
       let proccess = nodeChildProcess.spawn(command[0],args,{shell:true});
 
@@ -220,7 +220,7 @@ angular.module('icestudio')
           callback();
         }
       });
-      
+
       proccess.on('exit', function (code) {
         if (code !== 0) {
           _this.enableKeyEvents();
@@ -231,9 +231,9 @@ angular.module('icestudio')
           callback();
         }
       });
-    
+
     };
-    
+
 
 
 //------------------------------------------
@@ -282,7 +282,7 @@ this.installDefaultPythonPackagesDir = function (defaultDir, callback) {
       files = files.map(function (item) {
         return coverPath(item);
       });
-      
+
       let pipExec = this.getPythonPipExecutable();
       self.executeCommand([coverPath(pipExec), 'install', '-U', '--no-deps'].concat(files), callback);
     }
@@ -329,14 +329,14 @@ this.installOnlinePythonPackages = function (callback) {
 };
 
 this.installOnlineApio = function (callback) {
-  
+
   let versionRange = '">=' + _package.apio.min + ',<' + _package.apio.max + '"';
   let extraPackages = _package.apio.extras || [];
-  
+
   let apio = this.getApioInstallable();
-  
+
   let pipExec = this.getPythonPipExecutable();
-  
+
   this.executeCommand([coverPath(pipExec), 'install', '-U', apio + '[' + extraPackages.toString() + ']' + versionRange], callback);
 };
 
