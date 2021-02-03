@@ -1,11 +1,20 @@
 <img src="https://raw.githubusercontent.com/FPGAwars/icestudio/develop/docs/resources/images/logo/icestudio-logo-label.png" align="center">
 
-[![Build Status](https://travis-ci.org/FPGAwars/icestudio.svg?branch=v0.5.0)](https://travis-ci.org/FPGAwars/icestudio)
+<!-- [![Build Status](https://travis-ci.org/FPGAwars/icestudio.svg?branch=v0.5.0)](https://travis-ci.org/FPGAwars/icestudio)
 [![Version](https://img.shields.io/badge/version-v0.5.0-orange.svg)](https://github.com/FPGAwars/icestudio/releases)
 [![License](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-2.0)
-[![Documentation Status](https://readthedocs.org/projects/icestudio/badge/?version=latest)](http://icestudio.readthedocs.io/en/latest)
+[![Documentation Status](https://readthedocs.org/projects/icestudio/badge/?version=latest)](http://icestudio.readthedocs.io/en/latest) -->
 
 Visual editor for open FPGA boards. **Modified to run on Apple M1 architecture**. Built on top of the [Icestorm project](http://www.clifford.at/icestorm/) using [Apio](https://github.com/FPGAwars/apio).
+
+## Changes for M1 architecture
+
+- Switch to [custom M1-compatible build](https://github.com/controversial/nw.js-npm-installer-m1) of nw.js
+- Change hardcoded homebrew paths to use m1 paths
+- Disable modules that wouldn’t work easily on ARM (“Device Firmware Upgrade Utilities” and “iCESugar board programmer”)
+- Modified build process for [tools-system](https://github.com/controversial/tools-system) to build USB drivers for M1
+  - monkey-patch to make icestudio install tools-system from that alternate source
+
 
     Graphic design -> Verilog, PCF -> Bistream -> FPGA
 
