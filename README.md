@@ -7,7 +7,7 @@
 
 Visual editor for open FPGA boards. **Modified to run on Apple M1 architecture**. Built on top of the [Icestorm project](http://www.clifford.at/icestorm/) using [Apio](https://github.com/FPGAwars/apio).
 
-## Changes for M1 architecture
+## NOTE: Changes made here for M1 architecture
 
 - Switch to [custom M1-compatible build](https://github.com/controversial/nw.js-npm-installer-m1) of nw.js
 - Change hardcoded homebrew paths to use m1 paths
@@ -16,7 +16,7 @@ Visual editor for open FPGA boards. **Modified to run on Apple M1 architecture**
   - monkey-patch to make icestudio install tools-system from that alternate source
 
 
-    Graphic design -> Verilog, PCF -> Bistream -> FPGA
+---
 
 For more information visit our site [icestudio.io](https://icestudio.io)
 
