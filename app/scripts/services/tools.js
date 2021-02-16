@@ -1030,7 +1030,7 @@ angular.module('icestudio')
         'mkdir', package_path,
         // Download tarball
         '&&',
-        'wget', '-c', tarball_url, '-O', '-',
+        'curl', '-fsSL', tarball_url,
         // Extract tarball
         '|',
         'tar', '-xz', '-C', package_path,
