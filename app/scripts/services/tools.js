@@ -1021,7 +1021,7 @@ angular.module('icestudio')
     function apioOverwriteSystem(callback) {
       updateProgress('apio install system (from M1 fork)', 40);
       const package_path = '~/.icestudio/apio/packages/tools-system';
-      const tarball_url = 'https://github.com/controversial/tools-system/releases/download/m1/tools-system-darwin_arm64-1.1.1.tar.gz';
+      const tarball_url = 'https://github.com/controversial/tools-system/releases/download/m1-v2/tools-system-darwin_arm64-1.1.1.tar.gz';
       utils.executeCommand([
         // Clear old copy
         'rm', '-rf', package_path,
